@@ -9,10 +9,51 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <h1>World Clock</h1>
+    <div class="container">
+      <h3>World Clock</h3>
+      <form>
+        <select name="city" id="cities">
+          <option value="">Select a City...</option>
+          <option value="">Provincetown, Ma</option>
+          <option value="">Puerto Vallarta, Mexico</option>
+          <option value="">Bogata, Colombia</option>
+          <option value="">Maputo, Mozambique</option>
+          <option value="">Seoul, South Korea</option>
+          <option value="">Current Location</option>
+        </select>
+      </form>
+
+      <h1>Current Location</h1>
+      <div class="current-location-row-1">June 28th</div>
+      <div class="current-location-row-2">Friday 2024</div>
+      <div class="current-location-time">8:19 PM</div>
+
+      <div class="city-container">
+        <div class="city">
+          <h2>Dar es Salaam</h2>
+          <div class="date">Friday 28th</div>
+          <div class="time">8:32 AM</div>
+        </div>
+        <div class="city">
+          <h2>Austin Texas</h2>
+          <div class="date">Friday 28th</div>
+          <div class="time">11:32 PM</div>
+        </div>
+        <div class="city">
+          <h2>Bangkok</h2>
+          <div class="date">Friday 28th</div>
+          <div class="time">12:32 PM</div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       Coded by Ano Irving and open sourced on
-      <a href="#" target="_blank">GitHub</a>
+      <a
+        href="https://github.com/AnoIrving/world-clock-application"
+        target="_blank"
+        >GitHub</a
+      >
     </footer>
     <script src="src/java.js"></script>
   </body>

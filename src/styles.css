@@ -1,0 +1,21 @@
+h3 {
+  text-align: center;
+}
+select {
+  display: block;
+}
+h1 {
+  text-align: center;
+}
+.current-location-time {
+  text-align: end;
+}
+.date {
+  text-align: end;
+}
+.time {
+  text-align: end;
+}
+footer {
+  text-align: center;
+}
