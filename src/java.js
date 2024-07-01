@@ -31,5 +31,32 @@ function updateTime() {
   }
 }
 
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone
+    .replace("New_York", "Provincetown")
+    .replace("_", " ")
+    .split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = `<h1>${cityName}</h1>
+        <div class="current-date-time">
+          <span class="current-date">${cityTime.format(
+            "MMMM "
+          )}<span class="big">${cityTime.format("Do ")}</span><br />
+            <span class="big">${cityTime.format(
+              "dddd "
+            )}</span>${cityTime.format("YYYY ")}</span
+          >
+          <div class="current-time">${cityTime.format(
+            "h:mm:ss "
+          )}<small>${cityTime.format("A")}</small></div>
+        </div>
+      `;
+}
+
 updateTime();
 setInterval(updateTime, 1000);
+
+let citySelectElement = document.querySelector("#cities");
+citySelectElement.addEventListener("change", updateCity);
