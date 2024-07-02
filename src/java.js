@@ -33,28 +33,29 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone
+    .replace("Mexico_City", "Puerto Vallarta")
     .replace("New_York", "Provincetown")
     .replace("_", " ")
     .split("/")[1];
+  if (cityTimeZone === moment.tz.guess()) {
+    cityName = "Current Location";
+  }
   let cityTime = moment().tz(cityTimeZone);
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = `<h1>${cityName}</h1>
-        <div class="current-date-time">
-          <span class="current-date">${cityTime.format(
-            "MMMM "
-          )}<span class="big">${cityTime.format("Do ")}</span><br />
-            <span class="big">${cityTime.format(
-              "dddd "
-            )}</span>${cityTime.format("YYYY ")}</span
-          >
-          <div class="current-time">${cityTime.format(
-            "h:mm:ss "
-          )}<small>${cityTime.format("A")}</small></div>
-        </div>
+  cityElement.innerHTML = `<div class="city-container" id="city">
+        <div class="city">
+          <h2>${cityName}</h2>
+          <div class="date" id="date">${cityTime.format(
+            "dddd MMMM Do"
+          )}<br /><span class='time-font'>${cityTime.format(
+    "h:mm:ss"
+  )}</span><small>${cityTime.format("A")}</small</div>
       `;
 }
-
 updateTime();
 setInterval(updateTime, 1000);
 
