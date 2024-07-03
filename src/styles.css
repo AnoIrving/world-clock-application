@@ -1,79 +1,80 @@
 body {
-  background-color: #f7dfee;
+  background-image: url(forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Orbitron", sans-serif;
+  background-color: #004a2f;
 }
 .container {
-  background-color: #1a1818;
-  margin: 0 auto;
+  background-color: #ffc93c;
+  opacity: 0.95;
+  margin: 40px auto;
+  margin-bottom: 10px;
   display: block;
   max-width: 500px;
-  color: #e3e3e3;
+  color: #155263;
   padding: 0px 20px;
-  border-width: 18px;
+  border: solid;
+  border-width: 12px;
   border-style: ridge;
-  border-color: #1a1818 #1a1818 #141010 #1a1818;
-  border-radius: 8px;
+  border-color: #ff9a3c #ff9a3c;
+  border-radius: 4px;
 }
 h3 {
   margin: 5px auto;
   padding-bottom: 10px;
   text-align: center;
+  font-weight: 800;
 }
 select {
-  font-size: 16px;
+  font-size: 18px;
   background-color: rgb(247, 223, 238, 75%);
   display: block;
   padding: 8px;
   width: 100%;
   border-radius: 4px;
 }
-h1 {
-  margin: 10px 0px;
-  font-size: 47px;
-  text-align: center;
-}
-.current-date-time {
-  display: flex;
-  justify-content: space-evenly;
-}
-.current-date {
-  font-size: 18px;
-  margin-right: 40px;
-}
-.big {
-  font-weight: 600;
-  font-size: 30px;
-}
-.current-time {
-  font-size: 52px;
-  margin-left: 40px;
-}
 h2 {
   margin: 0 auto;
   margin-left: 0px;
-  padding: 12px 0px 8px;
-  font-size: 36px;
-  font-weight: 400;
+  padding: 10px 0px 8px;
+  font-size: 30px;
+  font-weight: 500;
 }
 .city {
   display: flex;
   justify-content: space-evenly;
-  margin: 20px auto;
-  padding: 10px;
-  border-width: 10px;
-  border-style: groove;
-  border-color: #1a1818 #1a1818 #141010 #1a1818;
-  border-radius: 4px;
+  margin: 10px auto;
+  padding: 20px;
+  border: solid;
+  border-width: 2px;
+  border-color: #ff6f3c #ff6f3c;
+  border-radius: 8px;
 }
 .date {
   text-align: end;
+  font-size: 16px;
+  font-weight: 500;
 }
 small {
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .time-font {
-  font-size: 48px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 800;
 }
 footer {
+  display: block;
   text-align: center;
+  background-color: rgba(33, 32, 32, 0.6);
+  padding: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: #ffc93c;
+  font-weight: 500;
+}
+a {
+  color: #ff6f3c;
 }
